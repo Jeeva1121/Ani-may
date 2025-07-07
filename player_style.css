@@ -1,0 +1,237 @@
+/* player_style.css */
+body {
+    /* Poppins font will be inherited from style.css or global styles */
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+}
+
+.player-main-content {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.player-main-content .container {
+    max-width: 1300px;
+}
+
+.player-main-content #anime-title-player {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-align: left;
+    font-size: 2.2em;
+}
+
+.player-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.video-section {
+    flex: 3;
+    min-width: 320px; 
+}
+
+.video-player-wrapper {
+    background-color: #000; 
+    margin-bottom: 10px; /* Reduced margin */
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative; 
+}
+
+.video-player-wrapper video { 
+    display: block; 
+    width: 100%;
+    height: auto; 
+    max-height: 70vh; 
+    border-radius: 8px; 
+}
+
+/* NEW: Video Controls Section */
+.video-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+}
+
+.quality-selector-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: var(--light-bg);
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+
+.quality-selector-container i {
+    color: var(--text-muted);
+    margin-right: 8px;
+}
+
+#quality-selector {
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    font-family: var(--font-family);
+    font-size: 0.9em;
+    cursor: pointer;
+}
+/* End of New Video Controls Section */
+
+
+.video-section #current-episode-title {
+    font-size: 1.6em;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.video-section #current-episode-description {
+    font-size: 1em;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.episode-list-section {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    background-color: var(--medium-bg); /* Reverted */
+    padding: 15px;
+    border-radius: 8px;
+    max-height: calc(70vh + 90px); /* Adjusted height to align better */
+    overflow-y: auto;
+    /* Removed backdrop-filter, -webkit-backdrop-filter, specific border, box-shadow */
+}
+
+.episode-list-section h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color); /* Reverted */
+    padding-bottom: 10px;
+    font-size: 1.3em;
+}
+
+#episode-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.episode-item {
+    display: flex;
+    align-items: flex-start; 
+    padding: 10px 5px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border-color); /* Reverted */
+    transition: background-color 0.2s ease;
+    border-radius: 4px; 
+    margin-bottom: 8px; 
+}
+
+.episode-item:last-child {
+    border-bottom: none;
+}
+
+.episode-item:hover {
+    background-color: var(--light-bg); /* Reverted */
+}
+
+.episode-item.active-episode {
+    background-color: var(--primary-color); 
+}
+.episode-item.active-episode .episode-item-number,
+.episode-item.active-episode .episode-item-title {
+    color: white; 
+}
+
+
+.episode-thumbnail {
+    width: 120px;  
+    height: 68px;   
+    object-fit: cover; 
+    border-radius: 4px;
+    margin-right: 12px;
+    flex-shrink: 0; 
+}
+
+.episode-text-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    flex-grow: 1; 
+    min-width: 0; 
+}
+
+.episode-item-number {
+    font-size: 0.85em;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.episode-item-title {
+    font-size: 0.95em;
+    color: var(--text-color);
+    line-height: 1.3;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+.episode-item.active-episode .episode-item-number {
+    color: #DDD6FE; /* Light lavender/violet for active episode number */
+}
+.episode-item.active-episode .episode-item-title {
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 992px) { 
+    .player-main-content .container {
+        max-width: 95%;
+    }
+    .player-layout {
+        flex-direction: column; 
+    }
+    .episode-list-section {
+        max-height: 400px; 
+        max-width: 100%; 
+    }
+    .player-main-content #anime-title-player {
+        font-size: 1.8em;
+        text-align: center; 
+    }
+    .episode-thumbnail {
+        width: 100px;
+        height: 56px;
+    }
+    .video-player-wrapper video {
+        max-height: 60vh;
+    }
+}
+
+@media (max-width: 768px) { 
+    .video-section #current-episode-title {
+        font-size: 1.3em;
+    }
+     .episode-list-section h3 {
+        font-size: 1.1em;
+    }
+    .episode-item-title {
+        font-size: 0.9em;
+    }
+    .episode-thumbnail {
+        width: 90px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    .video-player-wrapper video {
+        max-height: 50vh; 
+    }
+}

@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #A076F9; /* Light Violet */
+    --secondary-color: #ffc107; /* Yellow, for premium or accents - Kept as is */
+    --dark-bg: #141519;       /* Dark background */
+    --medium-bg: #1c1e22;     /* Slightly lighter background for cards/elements */
+    --light-bg: #252831;      /* Lighter background for hover or active states */
+    --text-color: #ffffff;    /* White text */
+    --text-muted: #adb5bd;    /* Greyish text for subtitles, descriptions */
+    --border-color: #3a3f4c;  /* Border color */
+    --font-family: 'Poppins', sans-serif;
+    --search-bar-placeholder-color: #757575; /* Color for search placeholder text */
+    --search-bar-icon-color: #888888;       /* Color for search icon */
+    --search-bar-text-color: #333333;      /* Color for typed text in search bar */
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-top: 65px; /* Adjusted for smaller fixed header */
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: transparent; /* Fully transparent background */
+    -webkit-backdrop-filter: blur(8px); /* Glass effect */
+    backdrop-filter: blur(8px); /* Glass effect, slightly more blur */
+    padding: 10px 0; /* Reduced padding */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle bottom border for separation */
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6em; /* Reduced font size */
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-right: 20px; /* Reduced margin */
+}
+
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 15px; /* Reduced gap */
+}
+.main-nav ul li {
+    margin-left: 0;
+}
+.main-nav ul li a {
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 0.9em; /* Reduced font size */
+    white-space: nowrap;
+}
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: var(--primary-color);
+}
+.main-nav ul li a i {
+    margin-left: 4px; /* Reduced margin */
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjusted gap */
+    margin-left: auto;
+}
+.header-actions .icon-btn { /* Removed .premium-btn from selector */
+    margin-left: 0;
+}
+
+.header-actions .icon-btn {
+    color: var(--text-color);
+    font-size: 1.1em; /* Reduced font size */
+    transition: color 0.3s ease;
+    padding: 8px; /* Add some padding for easier clicking on standalone icons */
+}
+.header-actions .icon-btn:hover {
+    color: var(--primary-color);
+}
+
+/* Premium Button Styles (Kept for potential future use, but button is removed from HTML) */
+.premium-btn {
+    background-color: var(--secondary-color);
+    color: var(--dark-bg);
+    padding: 6px 12px;
+    border-radius: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 0.85em;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+.premium-btn:hover {
+    background-color: #ffac07;
+}
+
+
+/* New Image-Inspired Search Bar */
+.search-bar-header-new {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff; /* White background for the search bar */
+    border-radius: 25px;       /* Fully rounded "pill" shape */
+    padding: 5px 8px 5px 15px; /* Top/Bottom L/R padding for input, more L for text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    height: 38px; /* Fixed height for consistency */
+    min-width: 200px; /* Minimum width */
+    max-width: 300px; /* Maximum width */
+}
+
+.search-input-header-new {
+    flex-grow: 1; /* Input takes available space */
+    border: none;
+    outline: none;
+    background-color: transparent; /* Input itself is transparent */
+    font-family: var(--font-family);
+    font-size: 0.9em;
+    color: var(--search-bar-text-color); /* Color for typed text */
+}
+
+.search-input-header-new::placeholder {
+    color: var(--search-bar-placeholder-color); /* Muted grey for placeholder */
+    opacity: 1; /* Ensure placeholder is fully visible */
+}
+
+.search-button-header-new {
+    background-color: transparent;
+    border: none;
+    padding: 0 8px; /* Padding around the icon */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--search-bar-icon-color); /* Muted grey for icon */
+}
+
+.search-button-header-new i {
+    font-size: 1em; /* Adjust icon size if needed */
+}
+
+.search-button-header-new:hover i {
+    color: var(--primary-color); /* Optional: Hover effect for icon */
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    min-height: 450px;
+    overflow: hidden;
+}
+
+.slides-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000; /* Fallback color */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+    display: flex;
+    align-items: flex-end;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hero-video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-video-overlay {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(20,21,25,0) 0%, rgba(20,21,25,0.9) 70%, var(--dark-bg) 100%);
+    z-index: 1;
+}
+
+.slide::before {
+    display: none;
+}
+
+
+.hero-content-wrapper {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+
+.hero-content h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+.hero-content img[alt$="Logo"] {
+    margin-bottom: 10px;
+    max-width: 350px;
+    height: auto;
+}
+
+
+.hero-content .tags {
+    font-size: 0.9em;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.hero-content .description {
+    font-size: 1em;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    line-height: 1.7;
+    max-width: 90%;
+}
+
+.hero-actions .btn {
+    padding: 12px 25px;
+    font-size: 0.95em;
+    font-weight: 600;
+    border-radius: 25px;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 2px solid var(--primary-color);
+}
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+.btn-primary i {
+    margin-right: 8px;
+}
+
+
+.btn-secondary {
+   background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.btn-secondary i {
+    width: 16px;
+    display: inline-block;
+}
+
+
+/* Slider Arrows */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5em;
+    transition: background-color 0.3s ease;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider-arrow:hover {
+    background-color: var(--primary-color);
+}
+.prev-arrow {
+    left: 20px;
+}
+.next-arrow {
+    right: 20px;
+}
+
+/* Slider Dots */
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 10;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.dot.active {
+    background-color: var(--primary-color);
+}
+
+/* Content Sections */
+.content-section {
+    padding: 40px 0;
+}
+
+.content-section h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.content-section .subtitle {
+    font-size: 1em;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+/* Anime Grid - Horizontally Scrollable Row */
+.anime-grid {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 20px;
+    padding: 10px 2px 20px 2px;
+    margin-bottom: 20px;
+}
+
+.anime-grid::-webkit-scrollbar {
+    height: 8px;
+}
+.anime-grid::-webkit-scrollbar-track {
+    background: var(--medium-bg);
+    border-radius: 4px;
+}
+.anime-grid::-webkit-scrollbar-thumb {
+    background: var(--light-bg);
+    border-radius: 4px;
+}
+.anime-grid::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+.anime-grid {
+    scrollbar-width: thin;
+    scrollbar-color: var(--light-bg) var(--medium-bg);
+}
+
+
+.anime-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    flex-shrink: 0;
+}
+
+.anime-card {
+    width: 190px;
+    background-color: var(--medium-bg);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.anime-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.anime-card img {
+    width: 100%;
+    height: 285px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px 6px 0 0;
+}
+
+.anime-card h3 {
+    font-size: 0.95em;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 12px 10px 5px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.anime-card p {
+    font-size: 0.8em;
+    color: var(--text-muted);
+    margin: 0 10px 12px 10px;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--medium-bg);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--text-muted);
+    margin-top: 30px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    body {
+        padding-top: 60px; /* Adjusted for smaller header */
+    }
+    .logo {
+        font-size: 1.5em;
+        margin-right: 15px;
+    }
+    .main-nav {
+        display: none; /* Hide main nav on smaller tablets to make space for search */
+    }
+     .main-nav.active { /* For a potential hamburger menu later */
+        display: flex;
+    }
+    .header-actions {
+        gap: 8px;
+    }
+    .header-actions .icon-btn {
+        font-size: 1em;
+    }
+    .search-bar-header-new {
+        min-width: 180px;
+        max-width: 250px;
+        height: 36px;
+    }
+    .search-input-header-new {
+        font-size: 0.85em;
+    }
+
+
+    .hero {
+        height: 65vh;
+    }
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+     .hero-content img[alt$="Logo"] {
+        max-width: 280px;
+    }
+    .hero-content .description {
+        font-size: 0.95em;
+    }
+    .content-section h2 {
+        font-size: 1.6em;
+    }
+    .anime-card {
+        width: 170px;
+    }
+    .anime-card img {
+        height: 255px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 0; /* Header becomes relative */
+    }
+    header {
+        position: relative; /* Header no longer fixed */
+        padding: 10px 0;
+        background-color: transparent;
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .nav-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .logo {
+        order: 1;
+        margin-right: auto;
+        margin-bottom: 0;
+        font-size: 1.6em;
+    }
+    .main-nav { /* Main nav links likely hidden behind a hamburger icon on mobile */
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+        display: none; /* Usually hidden by default on mobile */
+    }
+    .main-nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 15px;
+    }
+    .header-actions {
+        order: 2;
+        margin-left: 0;
+        justify-content: flex-end;
+        gap: 8px; /* Smaller gap for icons */
+    }
+    .search-bar-header-new {
+        min-width: 150px; /* Allow it to shrink more */
+        max-width: 220px; /* Adjust max width */
+        height: 34px;
+        padding: 4px 6px 4px 12px;
+    }
+    .search-input-header-new {
+        font-size: 0.8em;
+    }
+    .search-button-header-new i {
+        font-size: 0.9em;
+    }
+
+
+    .hero {
+        margin-top: 0;
+        height: auto;
+        min-height: 400px;
+        padding-bottom: 80px;
+    }
+     .hero-content-wrapper {
+        padding: 20px;
+    }
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+    .hero-content img[alt$="Logo"] {
+        max-width: 220px;
+    }
+    .hero-actions .btn {
+        padding: 10px 18px;
+        font-size: 0.85em;
+    }
+    .slider-arrow {
+        padding: 10px;
+        font-size: 1.2em;
+        width: 40px;
+        height: 40px;
+    }
+    .prev-arrow { left: 10px; }
+    .next-arrow { right: 10px; }
+
+    .content-section h2 {
+        font-size: 1.4em;
+    }
+    .content-section .subtitle {
+        font-size: 0.9em;
+    }
+    .anime-card {
+        width: 150px;
+    }
+    .anime-card img {
+        height: 225px;
+    }
+    .anime-card h3 {
+        font-size: 0.9em;
+    }
+    .anime-card p {
+        font-size: 0.75em;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.4em; /* Smaller logo for very small screens */
+    }
+    .header-actions .icon-btn {
+        font-size: 0.9em; /* Smaller icons */
+        padding: 5px;
+    }
+    .search-bar-header-new {
+        /* Make search bar take more available space or become an icon toggle */
+        min-width: auto; /* Allow it to be smaller if needed */
+        flex-grow: 1; /* Let it grow to fill space if other items are few */
+        max-width: 180px; /* Cap its growth */
+        margin-right: 5px; /* Space before other icons */
+    }
+    .search-input-header-new {
+        font-size: 0.75em;
+    }
+   
+
+    .hero-content h1 {
+        font-size: 1.6em;
+    }
+     .hero-content img[alt$="Logo"] {
+        max-width: 200px;
+    }
+    .hero-content .description {
+        font-size: 0.9em;
+        margin-bottom: 20px;
+    }
+    .anime-card {
+        width: 130px;
+    }
+    .anime-card img {
+        height: 195px;
+    }
+}

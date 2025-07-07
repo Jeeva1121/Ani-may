@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Streaming Site</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ANI-MAY</a> <!-- Updated Logo -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">New</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">Trending</a></li>
+                    <li><a href="#">Categories<i class="fas fa-chevron-down fa-xs"></i></a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">News<i class="fas fa-chevron-down fa-xs"></i></a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <!-- Premium button removed -->
+                <div class="search-bar-header-new">
+                    <input type="text" class="search-input-header-new" placeholder="Search">
+                    <button class="search-button-header-new" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <a href="#" class="icon-btn"><i class="fas fa-bookmark"></i></a>
+                <a href="#" class="icon-btn"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="slides-container">
+                <!-- Slide 1: Bleach -->
+                <div class="slide active" data-anime-id="bleach">
+                    <video class="hero-video-background" loop muted playsinline poster="images/bleach.webp">
+                        <source src="video preview/slide-1 video thumbanil.mp4" type="video/mp4">
+                        <source src="videos/default_preview.mp4" type="video/mp4">
+                         Your browser does not support the video tag.
+                    </video>
+                    <div class="hero-video-overlay"></div>
+                    <div class="hero-content-wrapper">
+                        <div class="hero-content">
+                            <span class="ani-may-badge"></span>
+                             <h1>Bleach</h1>
+                            <p class="tags">Sub | Dub • Action, Drama, Shonen, Supernatural</p>
+                            <p class="description">
+                              Bleach follows the story of Ichigo Kurosaki. When Ichigo meets Rukia he finds his life is changed forever.
+                            </p>
+                            <div class="hero-actions">
+                                <a href="player.html?animeId=bleach&ep=1" class="btn btn-primary"><i class="fas fa-play"></i> Start watching</a>
+                                <a href="#" class="btn btn-secondary"><i class="fas fa-plus"></i> ADD TO WATCHLIST</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Vinland Saga -->
+                <div class="slide" data-anime-id="vinland-saga">
+                    <video class="hero-video-background" loop muted playsinline poster="images/vinland-saga.jpg">
+                        <source src="video preview/slide-2 video thumbnail.mp4" type="video/mp4">
+                        <source src="videos/default_preview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="hero-video-overlay"></div>
+                     <div class="hero-content-wrapper">
+                        <div class="hero-content">
+                            <span class="ani-may-badge"></span>
+                            <h1>Vinland Saga</h1>
+                            <p class="tags">Sub | Dub • Action, Drama, Historical, Seinen</p>
+                            <p class="description">
+                              Thorfinn, a young Viking warrior, embarks on a journey of revenge and self-discovery after losing his father to a mercenary leader. Set in an era of war and conquest, it’s a tale of survival, honor, and the pursuit of a peaceful land called Vinland.
+                            </p>
+                            <div class="hero-actions">
+                                <a href="player.html?animeId=vinland-saga&ep=1" class="btn btn-primary"><i class="fas fa-play"></i> Start watching</a>
+                                <a href="#" class="btn btn-secondary"><i class="fas fa-plus"></i> ADD TO WATCHLIST</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Attack on Titan -->
+                <div class="slide" data-anime-id="attack-on-titan">
+                    <video class="hero-video-background" loop muted playsinline poster="images/AOT.png">
+                        <source src="video preview/slide-3 video thumbnail.mp4" type="video/mp4">
+                        <source src="videos/default_preview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="hero-video-overlay"></div>
+                     <div class="hero-content-wrapper">
+                        <div class="hero-content">
+                            <span class="ani-may-badge"></span>
+                            <h1>Attack on Titan</h1>
+                            <p class="tags">Sub | Dub • Action, Drama, Dark Fantasy, Shonen</p>
+                            <p class="description">
+                              In a world where humanity hides behind massive walls to escape man-eating titans, peace shatters when a colossal titan breaches the defenses. Eren Yeager witnesses tragedy and vows to eradicate every titan. As the battle unfolds, secrets about the titans and humanity's past come to light.
+                            </p>
+                            <div class="hero-actions">
+                                <a href="player.html?animeId=attack-on-titan&ep=1" class="btn btn-primary"><i class="fas fa-play"></i> Watch now s1 </a>
+                                <a href="#" class="btn btn-secondary"><i class="fas fa-plus"></i> ADD TO WATCHLIST</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Slide 4: Black Clover -->
+                <div class="slide" data-anime-id="black-clover">
+                    <video class="hero-video-background" loop muted playsinline poster="images/black clover.jpg">
+                        <source src="video preview/slide-4 video thumbnail.mp4" type="video/mp4">
+                        <source src="videos/default_preview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="hero-video-overlay"></div>
+                    <div class="hero-content-wrapper">
+                        <div class="hero-content">
+                            <span class="ani-may-badge"></span>
+                            <h1>Black Clover</h1>
+                            <p class="tags">Sub | Dub • Action, Fantasy, Adventure, Shonen</p>
+                            <p class="description">
+                               In a world where magic determines power, Asta, a boy born without magic, dreams of becoming the Wizard King. Armed with determination and a rare anti-magic grimoire, he fights alongside his friends to protect the Clover Kingdom.
+                            </p>
+                            <div class="hero-actions">
+                                <a href="player.html?animeId=black-clover&ep=1" class="btn btn-primary"><i class="fas fa-play"></i> Watch episodes</a>
+                                <a href="#" class="btn btn-secondary"><i class="fas fa-plus"></i> ADD TO WATCHLIST</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-dots"></div>
+            <button class="slider-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>2025 Crunchyroll Anime Awards Winners</h2>
+                <p class="subtitle">Relive the Magic</p>
+                <div class="anime-grid">
+                    <a href="player.html?animeId=dandadan&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                            <img src="card img/crunchy awards/dandadan.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="DAN DA DAN">
+                            <h3>DAN DA DAN</h3>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </a>
+                    <a href="player.html?animeId=spy-x-family&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                            <img src="card img/crunchy awards/spy x family.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="SPY x FAMILY">
+                            <h3>SPY x FAMILY</h3>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </a>
+                     <a href="player.html?animeId=solo-leveling&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                            <img src="card img/crunchy awards/solo leveling.jpg"  alt="Solo Leveling">
+                            <h3>Solo Leveling</h3>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </a>
+                     <a href="player.html?animeId=frieren&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                            <img src="card img/crunchy awards/frieren.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Frieren">
+                            <h3>Frieren: Beyond Journey's End</h3>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </a>
+                     <a href="player.html?animeId=demon-slayer&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                            <img src="card img/crunchy awards/demon slayer.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Demon Slayer">
+                            <h3>Demon Slayer</h3>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </a>
+                    <a href="player.html?animeId=jujutsu-kaisen&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                             <img src="card img/crunchy awards/jujutsu kaisen.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Jujutsu Kaisen">
+                            <h3>Jujutsu Kaisen</h3>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </a>
+                     <a href="player.html?animeId=chainsaw-man&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                            <img src="card img/crunchy awards/chainsaw.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Chainsaw Man">
+                            <h3>Chainsaw Man</h3>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>Watch Tamil Dubs For Free</h2>
+                <p class="subtitle">Check out these great Tamil dubs</p>
+                <div class="anime-grid">
+                    <a href="player.html?animeId=one-punch-man&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                            <img src="card img/Tamil dubbed/one-punch-man.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="One Punch Man">
+                            <h3>One punch man</h3>
+                            <p>Dubbed</p>
+                        </div>
+                    </a>
+                    <a href="player.html?animeId=hunter-x-hunter&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                            <img src="card img/Tamil dubbed/hunter-x-hunter.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Hunter x Hunter">
+                            <h3>Hunter x Hunter</h3>
+                            <p>Dubbed</p>
+                        </div>
+                    </a>
+                    <a href="player.html?animeId=dr-stone&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                             <img src="card img/Tamil dubbed/Dr.stone.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Dr. STONE">
+                            <h3>Dr. STONE</h3>
+                            <p>Dubbed</p>
+                        </div>
+                    </a>
+                     <a href="player.html?animeId=attack-on-titan&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                             <img src="card img/Tamil dubbed/AOT.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Attack on Titan">
+                            <h3>Attack on Titan</h3>
+                            <p>Dubbed</p>
+                        </div>
+                    </a>
+                    <a href="player.html?animeId=naruto&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                             <img src="card img/Tamil dubbed/Narato.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Naruto">
+                            <h3>Naruto</h3>
+                            <p>Dubbed</p>
+                        </div>
+                    </a>
+                    <a href="player.html?animeId=death-note&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                             <img src="card img/Tamil dubbed/death note.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Death Note">
+                            <h3>Death Note</h3>
+                            <p>Dubbed</p>
+                        </div>
+                    </a>
+                    <a href="player.html?animeId=pokemon&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                             <img src="card img/Tamil dubbed/pokemon.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Pokemon">
+                            <h3>pokemon</h3>
+                            <p>Dubbed</p>
+                        </div>
+                    </a>
+                     <a href="player.html?animeId=my-hero-academia&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                             <img src="card img/Tamil dubbed/my hero academia.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="My Hero Academia">
+                            <h3>My Hero Academia</h3>
+                            <p>Dubbed</p>
+                        </div>
+                    </a>
+                     <a href="player.html?animeId=shangri-la-frontier&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                             <img src="card img/Tamil dubbed/shangri la-frontier.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Shangri-la Frontier">
+                            <h3>Shangri-la frontier</h3>
+                            <p>Dubbed</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>Fan Favorites</h2>
+                <p class="subtitle">Most popular series this season</p>
+                <div class="anime-grid">
+                    <a href="player.html?animeId=bleach&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                            <img src="card img/Fan favourites/bleach.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Bleach">
+                            <h3>Bleach</h3>
+                            <p>Action, Adventure, Shonen, Supernatural</p>
+                        </div>
+                    </a>
+                    <a href="player.html?animeId=dororo&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                            <img src="card img/Fan favourites/dororo.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Dororo">
+                            <h3>Dororo</h3>
+                            <p>Action, Adventure, Historical, Supernatural</p>
+                        </div>
+                    </a>
+                     <a href="player.html?animeId=fullmetal-alchemist&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                            <img src="card img/Fan favourites/full metal-alchemist.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Fullmetal Alchemist">
+                            <h3>Fullmetal Alchemist</h3>
+                            <p>Action, Adventure, Fantasy, Steampunk</p>
+                        </div>
+                    </a>
+                    <a href="player.html?animeId=gintama&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                            <img src="card img/Fan favourites/gin-tama.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Gintama">
+                            <h3>Gin tama</h3>
+                            <p>Action, Comedy, Sci-Fi, Parody</p>
+                        </div>
+                    </a>
+                    <a href="player.html?animeId=tokyo-revengers&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                            <img src="card img/Fan favourites/tokyo-revengers.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Tokyo Revengers">
+                            <h3>Tokyo revengers</h3>
+                            <p>Action, Drama, Time Travel, Shonen</p>
+                        </div>
+                    </a>
+                    <a href="player.html?animeId=wind-breaker&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                            <img src="card img/Fan favourites/wind-breaker.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Wind Breaker">
+                            <h3>Wind breaker</h3>
+                            <p>Action, Sports, Drama, Urban/p>
+                        </div>
+                    </a>
+                    <a href="player.html?animeId=sakamoto-days&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                            <img src="card img/Fan favourites/sakamoto-days.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Sakamoto Days">
+                            <h3>Sakamoto days</h3>
+                            <p>Action, Comedy, Crime, Slice of Life</p>
+                        </div>
+                    </a>
+                    <a href="player.html?animeId=noragami&ep=1" class="anime-card-link">
+                        <div class="anime-card">
+                            <img src="card img/Fan favourites/Noragami.jpg" onerror="this.src='https://via.placeholder.com/190x285?text=Error';" alt="Noragami">
+                            <h3>Noragami</h3>
+                            <p>Series • Sub</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Your Anime Site.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

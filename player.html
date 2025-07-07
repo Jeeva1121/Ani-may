@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player - Anime Streaming Site</title>
+    <link rel="stylesheet" href="style.css"> <!-- Main styles -->
+    <link rel="stylesheet" href="player_style.css"> <!-- Player specific styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ANI-MAY</a>
+             <nav class="main-nav"> <!-- Simplified Nav for player page -->
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="icon-btn"><i class="fas fa-search"></i></a>
+                <a href="#" class="icon-btn"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="player-main-content">
+        <div class="container">
+            <h1 id="anime-title-player">Loading Anime...</h1>
+            <div class="player-layout">
+                <div class="video-section">
+                    <div class="video-player-wrapper">
+                        <video id="main-video-player" controls autoplay muted width="100%" crossorigin="anonymous">
+                            <!-- Video source and tracks will be loaded by JavaScript -->
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-controls">
+                        <div class="quality-selector-container">
+                            <i class="fas fa-cog"></i>
+                            <select id="quality-selector" aria-label="Select video quality">
+                                <!-- Options will be loaded by JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                    <h2 id="current-episode-title">Loading episode...</h2>
+                    <p id="current-episode-description">Loading description...</p>
+                </div>
+                <aside class="episode-list-section">
+                    <h3>Episodes</h3>
+                    <ul id="episode-list">
+                        <li>Loading episodes...</li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Your Anime Site.</p>
+        </div>
+    </footer>
+
+    <script src="player_script.js"></script>
+</body>
+</html>
